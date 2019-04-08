@@ -1,0 +1,30 @@
+<h2>Sign Up</h2>
+
+<form>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Email</label>
+        <input type="text" class="form-control" [(ngModel)]="email" name="email" ng-required="true"/>
+        <p *ngIf="isValid" class="required">Please enter a value into this field </p>
+
+        <label>First Name</label>
+        <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName" ng-required="true"/>
+        <p *ngIf="isValid" class="required">Please enter a value into this field </p>
+
+        <label>Last Name</label>
+        <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName" ng-required="true"/>
+        <p *ngIf="isValid" class="required">Please enter a value into this field </p>
+
+        <label>Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" ng-required="true"/>
+        <p *ngIf="isValid" class="required">Please enter a value into this field </p>
+
+        <label>Phone Number</label>
+        <input type="tel" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber" ng-required="true"/>
+
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="signUp()">Submit</button>
+     <!--This is Input bound and requires square brackets.-->
+  </form>
